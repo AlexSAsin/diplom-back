@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "fastify": "^3.24.1",
+    "fastify-loader": "^2.4.0",
+    "pg": "^8.7.1",
+    "sequelize": "^6.12.0-beta.2"
+  }
+}
