@@ -10,6 +10,6 @@ $ docker-compose up
 $ npx sequelize-cli init
 
 # execute migrate
-npx sequelize-cli db:migrate
+$ npx sequelize-cli db:migrate
 
 # run with debug vs
