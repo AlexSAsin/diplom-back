@@ -1,0 +1,20 @@
+version: '2.1'
+services:
+  postgres:
+    image: kartoza/postgis:12.1
+    container_name: diplom_bd
+
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DBNAME=test_bd
+      - POSTGRES_USER=test_user
+      - POSTGRES_PASS=pass
+      - DEFAULT_COLLATION="en_US.UTF-8"
+      - DEFAULT_CTYPE="en_US.UTF-8"
+      - POSTGRES_MULTIPLE_EXTENSIONS=fuzzystrmatch,postgis_tiger_geocoder,postgis_topology,"uuid-ossp"
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U test_user']
+      interval: 10s
+      timeout: 5s
+      retries: 5
